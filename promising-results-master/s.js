@@ -37,5 +37,28 @@
     }); */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
+async function doMath(){
+    try{
+        let calc = await slowMath.add(6,2);
+        console.log(calc);
+        calc = await slowMath.multiply(calc,2);
+        console.log(calc);
+        calc = await slowMath.divide(calc,4);
+        console.log(calc);
+        calc = await slowMath.subtract(calc,3);
+        console.log(calc);
+        calc = await slowMath.add(calc,98);
+        console.log(calc);
+        calc = await slowMath.remainder(calc,2);
+        console.log(calc);
+        calc = await slowMath.multiply(calc,50);
+        console.log(calc);
+        calc = await slowMath.remainder(calc,40);
+        console.log(calc);
+        calc = await slowMath.add(calc,32);
+        console.log(`this is my value ${calc}`);
+    } catch (err){
+        console.log(`error`)
+    }
+}
+doMath();
